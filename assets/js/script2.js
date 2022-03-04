@@ -1,12 +1,12 @@
-$(document).ready(function () {// essentially tells engine to load 1)html & 2)css first.
+$(document).ready(function () {
     //display current day & time.
     $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
 
     //Assign saveBtn click listener for user input and time stamp??
     $(".saveBtn").on("click", function () {
         //get nearby values.
-        var formValue = $(this).siblings(".description").val();
         console.log(this);
+        var formValue = $(this).siblings(".description").val();
         var listItem = $(this).parent().attr("id");
 
         //set items in local storage.
@@ -21,8 +21,8 @@ $(document).ready(function () {// essentially tells engine to load 1)html & 2)cs
     $("#hour14 .description").val(localStorage.getItem("hour2"));
     $("#hour15 .description").val(localStorage.getItem("hour3"));
     $("#hour16 .description").val(localStorage.getItem("hour4"));
-    $("#hour17 .description").val(localStorage.getItem("hour5"));
-    $("#hour18 .description").val(localStorage.getItem("hour6"));
+    $("#hour17 .description").val(localStorage.getItem("hour17"));
+    $("#hour18 .description").val(localStorage.getItem("hour18"));
 
 
     function hourTracker() {
