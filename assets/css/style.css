@@ -12,13 +12,16 @@ textarea{
   border-left: 1px solid black;
   padding: 10px;
 }
+.jb-primary {
+  background-color:#007bff;
+}
 
 .jumbotron {
   text-align: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 30px solid yellowgreen;
 }
 
 .description{

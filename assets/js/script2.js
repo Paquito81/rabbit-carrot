@@ -4,26 +4,25 @@ $(document).ready(function () {// essentially tells engine to load 1)html & 2)cs
 
     //Assign saveBtn click listener for user input and time stamp??
     $(".saveBtn").on("click", function () {
-        event.preventDefault();
         //get nearby values.
-        var formValue = $(this).siblings(".form-control").val();
-        console.log(formValue);
-        var listItem = $(this).parent().attr("hour");
+        var formValue = $(this).siblings(".description").val();
+        console.log(this);
+        var listItem = $(this).parent().attr("id");
 
         //set items in local storage.
         localStorage.setItem(listItem, formValue);
     })
     //load any saved data from LocalStorage - do this for each hour created.
-    $("#hour9").val(localStorage.getItem("9"));
-    $("#hour10").val(localStorage.getItem("10"));
-    $("#hour11").val(localStorage.getItem("11"));
-    $("#hour12").val(localStorage.getItem("12"));
-    $("#hour13").val(localStorage.getItem("1"));
-    $("#hour14").val(localStorage.getItem("2"));
-    $("#hour15").val(localStorage.getItem("3"));
-    $("#hour16").val(localStorage.getItem("4"));
-    $("#hour17").val(localStorage.getItem("5"));
-    $("#hour18").val(localStorage.getItem("6"));
+    $("#hour9 .description").val(localStorage.getItem("hour9"));
+    $("#hour10 .description").val(localStorage.getItem("hour10"));
+    $("#hour11 .description").val(localStorage.getItem("hour11"));
+    $("#hour12 .description").val(localStorage.getItem("hour12"));
+    $("#hour13 .description").val(localStorage.getItem("hour1"));
+    $("#hour14 .description").val(localStorage.getItem("hour2"));
+    $("#hour15 .description").val(localStorage.getItem("hour3"));
+    $("#hour16 .description").val(localStorage.getItem("hour4"));
+    $("#hour17 .description").val(localStorage.getItem("hour5"));
+    $("#hour18 .description").val(localStorage.getItem("hour6"));
 
 
     function hourTracker() {
